@@ -11,12 +11,19 @@
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
       <version>1.2.12</version>
-      <scope>system</scope>
-      <systemPath>C:/Users/lenovo/git/hello-world/lib/log4j-1.2.12.jar</systemPath>
+      <!-- <scope>system</scope> -->
+      <!-- <systemPath>C:/Users/lenovo/git/hello-world/lib/log4j-1.2.12.jar</systemPath> -->
       <!-- <systemPath>${project.basedir}/lib/log4j-1.2.12.jar</systemPath> -->
     </dependency>
-  </dependencies>  
+  </dependencies>
   
+  <repositories>
+    <repository>
+        <id>localrepository</id>
+        <url>file://${project.basedir}/lib</url>
+    </repository>
+  </repositories>
+
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
